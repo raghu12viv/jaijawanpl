@@ -1,31 +1,33 @@
-import './App.css';
-import Footer from './Components/Footer';
-import Homepage from './Components/Homepage';
-import Navbar from './Components/Navbar';
-import { createRoot } from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  BrowserRouter,
-  Route,
-  Link,
-  Router,
-  Routes,
-} from "react-router-dom";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import { BrowserRouter as Router,  Route, Routes } from "react-router-dom";
+import { Homepage } from "./Components/Homepage";
+import { AboutUS } from "./Components/AboutUS";
+import { CeraSanitaryWare } from "./Components/CeraSanitaryWare";
+import { ChairmanMessage } from "./Components/ChairmanMessage";
+import { Footer } from "./Components/Footer";
+import Product from "./Components/Product";
+import MainPageContact from "./Components/MainPageContact";
 
 function App() {
   return (
     <>
-      <Navbar/>
-      <BrowserRouter>
-        <Routes>
-          {/* <Route path='/' element={<Homepage/>}/> */}
-          {/* <Route path='About' element={<TextForm/>}/> */}
-        </Routes>
-      </BrowserRouter>
-      <Homepage/>
-      <Footer/>
-    </>
+      <Router>
+        <Navbar />
+
+        <div className="pages">
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/about-us" element={<AboutUS />} />
+            <Route path="/cerasanitaryware" element={<CeraSanitaryWare />} />
+            <Route path="/chairmanmessage" element={<ChairmanMessage />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/contact" element={<MainPageContact />} />
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
+  </>
   );
 }
 
