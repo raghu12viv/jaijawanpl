@@ -1,107 +1,13 @@
-export default function Homepage() {
+import React from "react";
+import Carousel from "./Carousel";
+import MainPageContact from "./MainPageContact";
 
-
+export function Homepage() {
   return (
     <>
-      {/* <!-- slider section start here --> */}
-      
-      <div className="slideshow-container">
-        <div className="mySlides fade">
-          <div className="numbertext">1 / 4</div>
-          <img src="Images/slider-1.webp" />
-          <div className="text">Caption Text</div>
-        </div>
 
-        <div className="mySlides fade">
-          <div className="numbertext">2 / 4</div>
-          <img src="Images/slider-2.webp" />
-          <div className="text">Caption Two</div>
-        </div>
-
-        <div className="mySlides fade">
-          <div className="numbertext">3 / 4</div>
-          <img src="Images/slider-3.webp" />
-          <div className="text">Caption Three</div>
-        </div>
-
-        <div className="mySlides fade">
-          <div className="numbertext">4 / 4</div>
-          <img src="Images/slider-4.webp" />
-          <div className="text">Caption Four</div>
-        </div>
-
-        <a className="prev" onClick="plusSlides(-1)">
-          ❮
-        </a>
-        <a className="next" onClick="plusSlides(1)">
-          ❯
-        </a>
-      </div>
-
-      <div>
-        {/* <span className="dot" onClick={currentSlide(1)}></span> */}
-        {/* <span className="dot" onClick={currentSlide(2)}></span> */}
-        <span className="dot" onClick="currentSlide(3)"></span>
-        <span className="dot" onClick="currentSlide(4)"></span>
-      </div>
-      <br />
-
-      {/* <!-- sldider section end here -->
-
-                <!-- Product Section Start --> */}
-      <div className="product-section">
-        <h2>Products</h2>
-        <div className="main-product-section">
-          <div className="product-col">
-            <p>Commode</p>
-            <img src="product-images/commode.webp" alt="" />
-          </div>
-          <div className="product-col">
-            <p>Tiles</p>
-            <img src="product-images/tiles.webp" alt="" />
-          </div>
-          <div className="product-col">
-            <p>Wash Basin</p>
-            <img src="product-images/wash-basin.webp" alt="" />
-          </div>
-          <div className="product-col">
-            <p>Shower</p>
-            <img src="product-images/showers.webp" alt="" />
-          </div>
-          <div className="product-col">
-            <p>Borewell Pipe</p>
-            <img src="product-images/borewell-pipes.webp" alt="" />
-          </div>
-          <div className="product-col">
-            <p>Fitting</p>
-            <img src="product-images/fitting.webp" alt="" />
-          </div>
-          <div className="product-col">
-            <p>Pipe</p>
-            <img src="product-images/pipes.webp" alt="" />
-          </div>
-          <div className="product-col">
-            <p>Garden Pipe</p>
-            <img src="product-images/garden-pipes.webp" alt="" />
-          </div>
-          <div className="product-col">
-            <p>Submersible</p>
-            <img src="product-images/submersible.webp" alt="" />
-          </div>
-          <div className="product-col">
-            <p>Water Pumps</p>
-            <img src="product-images/water-pumps.webp" alt="" />
-          </div>
-          <div className="product-col">
-            <p>Water Tank</p>
-            <img src="product-images/water-tank.webp" alt="" />
-          </div>
-          <div className="product-col">
-            <p>Mirror</p>
-            <img src="product-images/mirrors.webp" alt="" />
-          </div>
-        </div>
-      </div>
+      <Carousel/>
+         
 
       <div className="we-deals-h2">
         <h2>We Deals in</h2>
@@ -146,7 +52,7 @@ export default function Homepage() {
               <li>Table Top Basin</li>
               <li>Bathtub</li>
             </ul>
-            <a className="weDealBtn" href="cera-sanitaryware.html">
+            <a className="weDealBtn" href="CeraSanitaryWare">
               Check More
             </a>
           </div>
@@ -259,13 +165,10 @@ export default function Homepage() {
         <h2>ADDRESS</h2>
         <div className="location">
           <div className="google-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14422.862164845665!2d82.9941516!3d25.3473247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e78bbd6a48f%3A0xb6d1b6f50bd334e6!2sJai%20Jawan%20Pipe%20And%20Hardware!5e0!3m2!1sen!2sin!4v1676432247897!5m2!1sen!2sin"
-              width="600"
-              height="450"
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
+           <a href="https://goo.gl/maps/kHbQkpHVDdkQ7snG9"> <img
+              src="Images/JaiJawan maps.webp"
+              title="Google Maps"
+            /></a>
           </div>
           <div className="loc-add">
             <p>
@@ -277,68 +180,7 @@ export default function Homepage() {
         </div>
       </div>
       <br />
-      {/* <!-- Google map end here --> */}
-      {/* <!-- contact section start here --> */}
-
-      <div className="contact-container">
-        <div className="row">
-          <div className="col-lg-6 m-auto">
-            <div className="card mt-5">
-              <div className="contact-title">
-                <h2 className="text-center py-2"> Contact Us </h2>
-                <hr />
-                {/* <?php 
-                          $Msg = "";
-                          if(isset($_GET['error']))
-                          {
-                              $Msg = " Please Fill in the Blanks ";
-                              echo '<div className="alert alert-danger">'.$Msg.'</div>';
-                          }
-
-                          if(isset($_GET['success']))
-                          {
-                              $Msg = " Your Message Has Been Sent ";
-                              echo '<div className="alert alert-success">'.$Msg.'</div>';
-                          }
-                      
-                      ?> */}
-              </div>
-              <div className="contact-body">
-                <form action="process.php">
-                  <input
-                    type="text"
-                    name="UName"
-                    placeholder="Name"
-                    className="form-control mb-2"
-                  />
-                  <input
-                    type="email"
-                    name="Email"
-                    placeholder="Email"
-                    className="form-control mb-2"
-                  />
-                  <input
-                    type="text"
-                    name="Subject"
-                    placeholder="Subject"
-                    className="form-control mb-2"
-                  />
-                  <textarea
-                    name="msg"
-                    className="form-control mb-2"
-                    placeholder="Write The Message"
-                  ></textarea>
-                  <input
-                    type="submit"
-                    className="btn btn-success"
-                    name="btn-send"
-                  />
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <MainPageContact />
     </>
   );
 }
